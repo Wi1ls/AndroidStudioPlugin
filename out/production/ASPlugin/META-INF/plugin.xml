@@ -1,0 +1,47 @@
+<idea-plugin>
+    <id>com.android.wills.wills</id>
+    <name>Wills Support</name>
+    <version>1.0</version>
+    <vendor email="shenwei_worl@yeah.net" url="https://github.com/Wi1ls">Wills</vendor>
+
+    <description>FindWithDialog 支持弹框输入搜索内容，搜索结果支持双击查看。(control L)\n
+    选择模式下，光标选择指定文案，在GenerateGroup(control Enter)选择FindWithSelector</description>
+
+    <change-notes>1.0:第一版，功能简单，UI 烂，还望见谅，还望见谅，还望见谅，还望见谅，还望见谅</change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.wills.findWithDialog"
+                class="wills.FindWithDialogAction"
+                text="FindWithDialog"
+                description="FindWithDialog">
+            <add-to-group group-id="ToolsBasicGroup" anchor="first"/>
+            <keyboard-shortcut
+                    keymap="Mac OS X 10.5+"
+                    first-keystroke="control L"/>
+        </action>
+
+        <action id="com.wills.findWithSelector"
+                class="wills.FindWithSelectorAction"
+                text="FindWithSelector"
+                description="FindWithSelector">
+
+            <add-to-group group-id="GenerateGroup"/>
+        </action>
+
+    </actions>
+
+</idea-plugin>
