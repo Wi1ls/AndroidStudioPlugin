@@ -10,12 +10,11 @@ import wills.helper.SearchUtils;
 import org.apache.http.util.TextUtils;
 import wills.storage.StorageManager;
 import wills.widgets.SelectSearchFileFrame;
-
+//根据选择的内容，调用搜索
 public class FindWithSelectorAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        // TODO: insert action logic here
         Editor mEditor = e.getData(PlatformDataKeys.EDITOR);
         if (mEditor == null) {
             return;

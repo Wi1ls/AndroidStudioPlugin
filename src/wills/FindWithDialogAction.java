@@ -10,12 +10,11 @@ import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
-
+//主动打开搜索框
 public class FindWithDialogAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        // TODO: insert action logic here
         String clipText = getClipBoardText();
         new SearchDialogModelFrame(e.getProject(),clipText);
 //        String searchContent = showSearchContent(clipText);
