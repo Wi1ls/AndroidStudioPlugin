@@ -1,14 +1,14 @@
 package wills.helper;
 
 public class ElementWrapper {
-    public String key;
-    public String value;
+  public String key;
+  public String value;
 
-    public ElementWrapper() {
-    }
+  public ElementWrapper() {
+  }
 
-    @Override
-    public String toString() {
-        return value;
-    }
+  @Override
+  public String toString() {
+    return value;
+  }
 }
