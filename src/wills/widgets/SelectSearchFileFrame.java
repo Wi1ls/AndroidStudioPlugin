@@ -30,6 +30,7 @@ public class SelectSearchFileFrame extends JFrame {
         jTextArea.setSize(500, 100);
         jTextArea.setWrapStyleWord(true);
         jTextArea.setLineWrap(true);
+        jTextArea.setEditable(false);
         jTextArea.setText("请按下方按钮选择String文件");
         panel1.add(jTextArea);
 

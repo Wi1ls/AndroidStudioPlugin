@@ -17,11 +17,6 @@ public class FindWithDialogAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         String clipText = getClipBoardText();
         new SearchDialogModelFrame(e.getProject(),clipText);
-//        String searchContent = showSearchContent(clipText);
-//        if (TextUtils.isEmpty(searchContent)) {
-//            return;
-//        }
-//        SearchUtils.handleSearch(e.getProject(), searchContent);
     }
 
     private String getClipBoardText() {
@@ -40,16 +35,5 @@ public class FindWithDialogAction extends AnAction {
             }
         }
         return "";
-    }
-
-    private String showSearchContent(String defaultText) {
-
-        String inputMessage = JOptionPane.showInputDialog(
-                null,"请输入想搜索的文案",
-                defaultText);
-        if (inputMessage == null) {
-            return null;
-        }
-        return inputMessage;
     }
 }

@@ -10,9 +10,7 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class SearchDialogModelFrame extends JFrame {
     private String searchPath;
@@ -25,12 +23,14 @@ public class SearchDialogModelFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         JPanel panel1 = new JPanel();
-        JTextArea jTextArea = new JTextArea();
+        JTextArea jTextArea1 = new JTextArea();
+        JTextArea jTextArea = jTextArea1;
         jTextArea.setSize(500, 100);
         jTextArea.setWrapStyleWord(true);
+        jTextArea.setEditable(false);
         jTextArea.setLineWrap(true);
         searchPath = StorageManager.FindDocumentUtils.getFilePath();
-        if (TextUtils.isEmpty(defaultContent)) {
+        if (TextUtils.isEmpty(searchPath)) {
             jTextArea.setText("请按下方按钮选择String文件");
         } else {
             jTextArea.setText(searchPath);
@@ -62,8 +62,6 @@ public class SearchDialogModelFrame extends JFrame {
         JPanel panel2 = new JPanel();
         JTextField jTextField = new JTextField(35);
         jTextField.setText(defaultContent);
-        jTextField.setSelectionStart(0);
-        jTextField.setSelectionEnd(defaultContent.length());
         panel2.add(jTextField);
 
 
@@ -89,7 +87,7 @@ public class SearchDialogModelFrame extends JFrame {
                             "ERROR",
                             Messages.getErrorIcon());
                 } else {
-                    if(SearchUtils.handleSearch(project, searchPath, searchText)){
+                    if (SearchUtils.handleSearch(project, searchPath, searchText)) {
                         dispose();
                     }
                 }
@@ -109,6 +107,14 @@ public class SearchDialogModelFrame extends JFrame {
                 KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
                 JComponent.WHEN_IN_FOCUSED_WINDOW);
 
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowActivated(WindowEvent e) {
+                jTextField.grabFocus();
+                jTextField.requestFocus();
+                jTextField.selectAll();
+            }
+        });
 
         setVisible(true);
     }
