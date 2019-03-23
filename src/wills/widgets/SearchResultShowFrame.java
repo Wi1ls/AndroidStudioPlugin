@@ -1,34 +1,47 @@
 package wills.widgets;
 
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
-import wills.helper.ClipboardUtils;
-import wills.helper.ElementWrapper;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.HeadlessException;
+import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.KeyStroke;
+import javax.swing.ListSelectionModel;
+import javax.swing.WindowConstants;
 
-public class SearchResultShowFrame extends JFrame {
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
+import com.intellij.ui.components.JBList;
+import com.intellij.ui.components.JBScrollPane;
+import wills.helper.ElementWrapper;
+
+public class SearchResultShowFrame extends BaseFrame {
 
 
   public SearchResultShowFrame(Project project,
-      ArrayList<ElementWrapper> data,String lastSearchContent) throws HeadlessException {
+      ArrayList<ElementWrapper> data,
+      String lastSearchContent) throws HeadlessException {
     setTitle("Search Result");
-    setLayout(new GridLayout(3, 1));
+    Box boxMain = Box.createVerticalBox();
     setSize(500, 500);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
-    JPanel panel = new JPanel();
-
-    JButton backButton = new JButton();
-    backButton.setText("返回到上一级");
-    backButton.addMouseListener(new MouseAdapter() {
+    Box boxBack = Box.createHorizontalBox();
+    boxBack.add(Box.createGlue());
+    JButton btnBack = new JButton();
+    btnBack.setText("back");
+    btnBack.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
         new SearchDialogModelFrame(project,
@@ -36,11 +49,12 @@ public class SearchResultShowFrame extends JFrame {
         dispose();
       }
     });
-    panel.add(backButton);
+    boxBack.add(btnBack);
+    boxBack.add(Box.createGlue());
+    boxMain.add(boxBack);
 
     // 创建一个 JList 实例
-    final JList<String> list = new JList<>();
-    list.setPreferredSize(new Dimension(480, 100));
+    final JBList<String> list = new JBList<>();
     // 允许可间断的多选
     list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     String[] dataArray = new String[data.size()];
@@ -52,7 +66,7 @@ public class SearchResultShowFrame extends JFrame {
     list.setListData(dataArray);
 
     // 设置默认选中项
-    list.setSelectedIndex(1);
+    list.setSelectedIndex(0);
     list.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
@@ -66,18 +80,21 @@ public class SearchResultShowFrame extends JFrame {
       }
     });
 
-    JScrollPane scrollPane = new JScrollPane();
-    scrollPane.setPreferredSize(new Dimension(500, 300));
-
+    JBScrollPane scrollPane = new JBScrollPane();
+    scrollPane.getViewport().setPreferredSize(new Dimension(300, 300));
     scrollPane.setViewportView(list);
+    scrollPane.setHorizontalScrollBar(new JScrollBar());
+    scrollPane.setVerticalScrollBar(new JScrollBar());
+    scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+    scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+    boxMain.add(scrollPane);
 
-    // 添加到内容面板容器
-    panel.add(scrollPane);
 
-
-    JButton jButton = new JButton();
-    jButton.setText("复制钥匙到剪切板");
-    jButton.addMouseListener(new MouseAdapter() {
+    Box boxCopy = Box.createHorizontalBox();
+    boxCopy.add(Box.createGlue());
+    JButton btnCopy = new JButton();
+    btnCopy.setText("copy key($name)");
+    btnCopy.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
         int index = list.getSelectedIndex();
@@ -86,11 +103,14 @@ public class SearchResultShowFrame extends JFrame {
         Transferable trans = new StringSelection(data.get(index).key);
         // 把文本内容设置到系统剪贴板
         clipboard.setContents(trans, null);
+        dispose();
       }
     });
+    boxCopy.add(btnCopy);
+    boxCopy.add(Box.createGlue());
+    boxMain.add(boxCopy);
 
-    panel.add(jButton);
-    setContentPane(panel);
+    add(boxMain);
 
     getRootPane().registerKeyboardAction(
         (e) ->
@@ -100,6 +120,5 @@ public class SearchResultShowFrame extends JFrame {
         JComponent.WHEN_IN_FOCUSED_WINDOW);
 
     setVisible(true);
-
   }
 }

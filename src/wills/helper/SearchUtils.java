@@ -17,14 +17,16 @@ import wills.widgets.SearchResultShowFrame;
 
 public class SearchUtils {
   public static boolean handleSearch(Project project, String searchPath,
-      String searchContent) {
-    return handleSearch1(project, searchPath, searchContent);
+      String searchContent, boolean fuzzy) {
+    return handleSearch1(project, searchPath, searchContent,
+        fuzzy);
   }
 
   private static boolean handleSearch1(
       Project project,
       String searchPath,
-      String searchString) {
+      String searchString,
+      boolean fuzzy) {
     if (TextUtils.isEmpty(searchString)) {
       showErrorInformation(project,
           "搜索内容不能为空");
@@ -37,12 +39,12 @@ public class SearchUtils {
           "请检查目标资源文件是否存在");
       return false;
     }
-    ArrayList<ElementWrapper> dataList = findContentKey(xmlFile, searchString);
+    ArrayList<ElementWrapper> dataList = findContentKey(xmlFile, searchString, fuzzy);
     if (dataList.isEmpty()) {
       showErrorInformation(project, "没有找到对应的文案");
       return false;
     } else {
-      showSearchList(project, dataList,searchString);
+      showSearchList(project, dataList, searchString);
       return true;
     }
   }
@@ -68,14 +70,17 @@ public class SearchUtils {
 
   //根据指定的搜索内容，返回符合条件的 String
   private static ArrayList<ElementWrapper> findContentKey(XmlFile xmlFile,
-      String targetContent) {
+      String targetContent, boolean fuzzy) {
     XmlTag xmlTags[] = xmlFile.getRootTag().getSubTags();
 
     ArrayList<ElementWrapper> wrapperList = new ArrayList<>();
     for (XmlTag xmlTag : xmlTags) {
       XmlTagValue xmlTagValue = xmlTag.getValue();
       String text = xmlTagValue.getText();
-      if (text.contains(targetContent)) {
+      boolean match = fuzzy ?
+          text.contains(targetContent)
+          : text.equals(targetContent);
+      if (match) {
         ElementWrapper wrapper = new ElementWrapper();
         wrapper.value = text;
         XmlAttribute xmlAttribute = xmlTag.getAttribute("name");
@@ -87,7 +92,7 @@ public class SearchUtils {
   }
 
   private static void showSearchList(Project project,
-      ArrayList<ElementWrapper> data,String lastSearchContent) {
-    new SearchResultShowFrame(project, data,lastSearchContent);
+      ArrayList<ElementWrapper> data, String lastSearchContent) {
+    new SearchResultShowFrame(project, data, lastSearchContent);
   }
 }

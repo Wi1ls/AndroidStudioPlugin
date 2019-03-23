@@ -1,13 +1,14 @@
 <idea-plugin>
     <id>com.android.wills.wills</id>
     <name>Wills Support</name>
-    <version>1.0.2</version>
-    <vendor email="shenwei_worl@yeah.net" url="https://github.com/Wi1ls">Wills</vendor>
+    <version>1.0.4</version>
+    <vendor email="shenwei_worl@yeah.net" url="https://github.com/Wi1ls">Wills
+    </vendor>
 
-    <description>FindWithDialog 支持弹框输入搜索内容，搜索结果支持双击查看。(control L)。
-    选择模式下，光标选择指定文案，在GenerateGroup(control Enter)选择FindWithSelector</description>
+    <description>supporting to search the string-value int string-file
+    </description>
 
-    <change-notes>1.0.1:优化了弹出窗的体验，默认光标全选剪切板内容。支持查询界面返回继续查询。</change-notes>
+    <change-notes>1.0.4:ui fix/fuzzy or complete matching/</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="171.0"/>

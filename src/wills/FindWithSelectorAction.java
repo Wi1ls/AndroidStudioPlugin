@@ -5,9 +5,9 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import org.apache.http.util.TextUtils;
 import org.jetbrains.annotations.NotNull;
 import wills.helper.SearchUtils;
-import org.apache.http.util.TextUtils;
 import wills.storage.StorageManager;
 import wills.widgets.SelectSearchFileFrame;
 
@@ -29,7 +29,8 @@ public class FindWithSelectorAction extends AnAction {
     if (TextUtils.isEmpty(searchFilePath)) {
       new SelectSearchFileFrame(e.getProject(), selectedText);
     } else {
-      SearchUtils.handleSearch(e.getProject(), searchFilePath, selectedText);
+      SearchUtils.handleSearch(e.getProject(), searchFilePath, selectedText,
+          true);
     }
   }
 

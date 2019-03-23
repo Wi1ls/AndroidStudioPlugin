@@ -1,25 +1,32 @@
 package wills.widgets;
 
+import java.awt.GridLayout;
+import java.awt.HeadlessException;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFileChooser;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.KeyStroke;
+import javax.swing.WindowConstants;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import org.apache.http.util.TextUtils;
 import wills.helper.SearchUtils;
 import wills.storage.StorageManager;
 
-import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 //使用选择模式，如果没有事前指定文件，则要先指定文件
-public class SelectSearchFileFrame extends JFrame {
+public class SelectSearchFileFrame extends BaseFrame {
 
   public SelectSearchFileFrame(Project project,
       String searchContent) throws HeadlessException {
-    setTitle("第一次使用请先选择文件");
+    setTitle("Choice string-file when first used");
     setLayout(new GridLayout(2, 1));
     setSize(500, 300);
     setLocationRelativeTo(null);
@@ -31,11 +38,11 @@ public class SelectSearchFileFrame extends JFrame {
     jTextArea.setWrapStyleWord(true);
     jTextArea.setLineWrap(true);
     jTextArea.setEditable(false);
-    jTextArea.setText("请按下方按钮选择String文件");
+    jTextArea.setText("Please click the button to choice the string-file");
     panel1.add(jTextArea);
 
     JButton fileSelectorButton = new JButton();
-    fileSelectorButton.setText("选择String文件");
+    fileSelectorButton.setText("Choice");
     panel1.add(fileSelectorButton);
 
     fileSelectorButton.addMouseListener(new MouseAdapter() {
@@ -69,7 +76,7 @@ public class SelectSearchFileFrame extends JFrame {
     if (TextUtils.isEmpty(searchPath)) {
       //没有选择的文件
       Messages.showMessageDialog(project,
-          "请选择要检索的资源文件",
+          "No target file",
           "ERROR",
           Messages.getErrorIcon());
       return;
@@ -78,11 +85,11 @@ public class SelectSearchFileFrame extends JFrame {
     if (TextUtils.isEmpty(searchText)) {
       //输入的文本有问题
       Messages.showMessageDialog(project,
-          "查找的内容不能为空",
+          "empty input",
           "ERROR",
           Messages.getErrorIcon());
     } else {
-      if (SearchUtils.handleSearch(project, searchPath, searchText)) {
+      if (SearchUtils.handleSearch(project, searchPath, searchText, true)) {
         dispose();
       }
     }

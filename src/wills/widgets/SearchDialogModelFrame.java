@@ -10,7 +10,6 @@ import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -25,34 +24,35 @@ import org.apache.http.util.TextUtils;
 import wills.helper.SearchUtils;
 import wills.storage.StorageManager;
 
-public class SearchDialogModelFrame extends JFrame {
+public class SearchDialogModelFrame extends BaseFrame {
+
   private String searchPath;
 
   public SearchDialogModelFrame(Project project,
       String defaultContent) throws HeadlessException {
-    setTitle("搜索");
+
+    setTitle("Search");
     setLayout(new GridLayout(4, 1));
     setSize(500, 300);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
     JPanel panel1 = new JPanel();
-    JTextArea jTextArea1 = new JTextArea();
-    JTextArea jTextArea = jTextArea1;
+    JTextArea jTextArea = new JTextArea();
     jTextArea.setSize(500, 100);
     jTextArea.setWrapStyleWord(true);
     jTextArea.setEditable(false);
     jTextArea.setLineWrap(true);
     searchPath = StorageManager.FindDocumentUtils.getFilePath();
     if (TextUtils.isEmpty(searchPath)) {
-      jTextArea.setText("请按下方按钮选择String文件");
+      jTextArea.setText("Please click the button to choice the string-file");
     } else {
       jTextArea.setText(searchPath);
     }
     panel1.add(jTextArea);
 
     JButton fileSelectorButton = new JButton();
-    fileSelectorButton.setText("选择String文件");
+    fileSelectorButton.setText("Choice");
     panel1.add(fileSelectorButton);
 
     fileSelectorButton.addMouseListener(new MouseAdapter() {
@@ -80,20 +80,31 @@ public class SearchDialogModelFrame extends JFrame {
 
 
     JPanel panel3 = new JPanel();
-    JButton searchButton = new JButton();
-    searchButton.setText("开始搜索");
-    searchButton.addMouseListener(new MouseAdapter() {
+    JButton fuzzySearchButton = new JButton();
+    fuzzySearchButton.setText("Fuzzy(default)");
+    fuzzySearchButton.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        doSearch(project, jTextField);
+        doSearch(project, jTextField, true);
       }
     });
+    panel3.add(fuzzySearchButton);
 
-    panel3.add(searchButton);
+    JPanel panel4 = new JPanel();
+    JButton exactSearchButton = new JButton();
+    exactSearchButton.setText("Complete");
+    exactSearchButton.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        doSearch(project, jTextField, false);
+      }
+    });
+    panel4.add(exactSearchButton);
 
     add(panel1);
     add(panel2);
     add(panel3);
+    add(panel4);
 
     getRootPane().registerKeyboardAction(
         (e) ->
@@ -103,7 +114,7 @@ public class SearchDialogModelFrame extends JFrame {
         JComponent.WHEN_IN_FOCUSED_WINDOW);
 
     getRootPane().registerKeyboardAction((e) -> {
-          doSearch(project, jTextField);
+          doSearch(project, jTextField, true);
         }
         , KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0),
         JComponent.WHEN_IN_FOCUSED_WINDOW);
@@ -117,10 +128,12 @@ public class SearchDialogModelFrame extends JFrame {
       }
     });
 
+
     setVisible(true);
   }
 
-  private void doSearch(Project project, JTextField jTextField) {
+  private void doSearch(Project project, JTextField jTextField,
+      boolean fuzzy) {
     if (TextUtils.isEmpty(searchPath)) {
       //没有选择的文件
       Messages.showMessageDialog(project,
@@ -137,7 +150,7 @@ public class SearchDialogModelFrame extends JFrame {
           "ERROR",
           Messages.getErrorIcon());
     } else {
-      if (SearchUtils.handleSearch(project, searchPath, searchText)) {
+      if (SearchUtils.handleSearch(project, searchPath, searchText, fuzzy)) {
         dispose();
       }
     }

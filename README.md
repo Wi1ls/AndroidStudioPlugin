@@ -1,15 +1,20 @@
-# AS 插件使用说明
-- Dialog 模式
-    - 热键control L(mac下)
-    - Tools -> FindWithDialog
-    - 输入要搜索的文字，默认是剪切板的内容
-    - 结果列表双击可以查看单条文案全部信息
-    - 点击复制可以复制文案对应的 key 使用
-- Selector 模式
-    - 光标选择想要搜索的内容
-    - 进入 Generate(类 ButterKnif)
-    - 自动出结果
+# AS
+- Dialog Model
+    - control L(mac)/Tools -> FindWithDialog
+    - input the content you want to search(clipboard default)
+    - scroll vertically/Horizontally
+    - when double click item,you can see the detail in independent dialog
+    - copy button(copy the string-key which item you selected[])
+- Selector Model
+    - select the content you want to search
+    - goto Generate(control enter[in mac])
+    - show you the result(fuzzy matching defalut)
 
+---
+TODO:
+- Repeated pop-up when call dialog endless
+- Automatic line break in result
+- Shortcut supported in Windows
 ---
 
 Autor:shenwei_work@yeah.net

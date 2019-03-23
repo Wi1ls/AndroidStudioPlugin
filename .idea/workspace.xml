@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922f438d-17a4-4fd2-a99b-bf99d4d62e0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/wills/helper/ClipboardUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/wills/widgets/BaseFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASPlugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ASPlugin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/FindWithDialogAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/FindWithDialogAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/FindWithSelectorAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/FindWithSelectorAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/helper/SearchUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/helper/SearchUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchDialogModelFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SearchResultShowFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SelectSearchFileFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SelectSearchFileFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SelectSearchFileFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASPlugin/wills/widgets/SelectSearchFileFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/FindWithDialogAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/FindWithDialogAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/FindWithSelectorAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/FindWithSelectorAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wills/helper/ElementWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/helper/ElementWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/helper/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/helper/SearchUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wills/storage/StorageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/storage/StorageManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java" afterDir="false" />
@@ -28,23 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wills/FindWithDialogAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-              <folding>
-                <element signature="e#866#1055#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#2165#2545#0" expanded="true" />
-                <element signature="e#2544#2545#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -52,41 +48,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wills/helper/ClipboardUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="568">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wills/widgets/BaseFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wills/storage/StorageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+        <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="358">
+              <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1463#1655#0" expanded="true" />
+                <element signature="e#1654#1655#0" expanded="true" />
+                <element signature="e#2195#2507#0" expanded="true" />
+                <element signature="e#2506#2507#0" expanded="true" />
+                <element signature="e#3161#3541#0" expanded="true" />
+                <element signature="e#3540#3541#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wills/FindWithSelectorAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -94,12 +96,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="104" column="49" lean-forward="true" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
+            <state relative-caret-position="343">
+              <caret line="47" column="74" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2354#2460#0" expanded="true" />
-                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#3799#4000#0" expanded="true" />
+                <element signature="e#3999#4000#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,14 +109,21 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/awt/event/WindowAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+            <state relative-caret-position="408">
+              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,11 +131,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wills/helper/SearchUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+            <state relative-caret-position="267">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wills/helper/ElementWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -143,6 +161,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>没有找到</find>
+      <find>windo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,19 +171,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/wills/FindWithSelector.java" />
-        <option value="$PROJECT_DIR$/src/wills/FindWithSelectorAction.java" />
-        <option value="$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java" />
         <option value="$PROJECT_DIR$/src/wills/helper/ClipboardUtils.java" />
+        <option value="$PROJECT_DIR$/src/wills/FindWithSelectorAction.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/wills/helper/FrameUtils.java" />
+        <option value="$PROJECT_DIR$/src/wills/widgets/BaseFrame.java" />
         <option value="$PROJECT_DIR$/src/wills/FindWithDialogAction.java" />
-        <option value="$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java" />
         <option value="$PROJECT_DIR$/src/wills/helper/SearchUtils.java" />
         <option value="$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java" />
+        <option value="$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="794" />
@@ -175,6 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,8 +252,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,7 +259,7 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="asplugin" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552357839288" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553314872709" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -270,9 +291,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="843" y="50" width="1440" height="794" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09155937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2067239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,16 +302,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.04418262" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.23065694" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.11929308" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.18978103" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.35327634" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.19330855" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17348203" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,33 +322,43 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.046494994" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.35327634" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info active="true" anchor="bottom" id="Find" order="5" visible="true" weight="0.05799373" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2067239" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.23065694" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.18978103" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.19330855" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17348203" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/openapi/vfs/VirtualFileSystem.class">
@@ -378,6 +410,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/awt/datatransfer/Clipboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/awt/event/WindowAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
@@ -385,59 +431,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wills/FindWithDialogAction.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/JScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="6798">
+          <caret line="349" column="11" selection-start-line="349" selection-start-column="11" selection-end-line="349" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/ui/components/JBScrollBar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/JTextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/helper/FrameUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/openapi/actionSystem/AnActionEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="198" column="26" lean-forward="true" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wills/FindWithSelectorAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="616">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wills/helper/ClipboardUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/wills/widgets/BaseFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/storage/StorageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/helper/SearchUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/wills/helper/ElementWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="104" column="49" lean-forward="true" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
+        <state relative-caret-position="264">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/helper/ClipboardUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2354#2460#0" expanded="true" />
-            <element signature="e#2459#2460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/FindWithDialogAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchDialogModelFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="47" column="74" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3799#4000#0" expanded="true" />
+            <element signature="e#3999#4000#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wills/widgets/SelectSearchFileFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wills/helper/SearchUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        <state relative-caret-position="408">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -446,21 +556,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wills/widgets/SearchResultShowFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="358">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="27" />
           <folding>
-            <element signature="e#866#1055#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#2165#2545#0" expanded="true" />
-            <element signature="e#2544#2545#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1655#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#2195#2507#0" expanded="true" />
+            <element signature="e#2506#2507#0" expanded="true" />
+            <element signature="e#3161#3541#0" expanded="true" />
+            <element signature="e#3540#3541#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
